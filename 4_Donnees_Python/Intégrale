@@ -1,0 +1,27 @@
+import math
+import matplotlib.pyplot as plt
+#la fontion qui calcule l'intégrale avec la méthode de trapèze
+def integre(f, a, b, n):
+    h=(b-a)/n
+    s=(f(a)+f(b))/2
+    for k in range(0,n-1):
+        s=s+f(a+k*h)
+    return h*s
+#la fontion étudiée
+def fonct(x):
+    return math.log(x+1)
+#étude de l'intégrale pour n allant de 0 à 10000
+x=[]
+E=[]
+for k in range (1,1001):
+    x.append(k)
+    I=integre(fonct, 0, 1,k)
+    E.append((2*math.log(2)-2)-I)#calcul de l'erreur
+#représentation graphique de l'évolution de l'erreur
+plt.plot(x, E)
+plt.title("Représentation de l'erreur en fonction du pas")
+plt.xlabel("n")
+plt.ylabel("Erreur")
+plt.show()
+
+
