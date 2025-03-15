@@ -1,0 +1,1 @@
+Ce programme permet de calculer l'intégrale de la fonction ln(x+1) sur [0,1] par la méthode des trapèzes, puis, représenter graphiquement l'évolution de l'erreur pour n allant de 1 à 1000
