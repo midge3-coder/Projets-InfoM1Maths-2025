@@ -1,0 +1,29 @@
+# Prédiction de la Qualité du Vin Rouge
+
+## Description
+Cet etude vise à développer et optimiser des modèles de machine learning pour prédire si un vin rouge est de haute qualité (score ≥ 7) ou non.
+
+## Structure
+
+### Données
+- **Cible binaire** (nouveau feature **isgood**: 
+  - 0: Vin "Mauvais" (qualité < 7)
+  - 1: Vin "Bon" (qualité ≥ 7)
+- **Features**: Variables chimiques et physiques du vin
+
+### Modèles Évalués
+1. Random Forest
+2. AdaBoost
+3. SVM
+4. Régression Logistique
+5. K-Nearest Neighbors
+6. Gradient BoostingAdaBoost
+7. Naive Bayes
+8. Neural Network
+
+### Méthodologie
+0. **Normalisation** : sdandardscaler
+1. **Évaluation initiale**: Test de 8 modèles
+2. **Sélection**: Choix des 3 meilleurs modèles
+3. **Optimisation**: Randomized Search sur les 3 modèles
+4. **Validation**: Matrices de confusion et métriques
